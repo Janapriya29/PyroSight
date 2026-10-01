@@ -1,0 +1,28 @@
+# PyroSight — runtime dependencies
+# Install with: pip install -r requirements.txt
+# Verified with Python 3.11.9 on Windows (CUDA 11.8 build of PyTorch)
+
+# Deep learning
+torch==2.7.1
+torchvision==0.22.1
+
+# Image processing
+Pillow==12.3.0
+
+# Numerical
+numpy==2.4.6
+
+# Web application
+streamlit==1.64.0
+
+# Notes
+# -----
+# torch and torchvision are distributed as CPU wheels by default on PyPI.
+# For GPU (CUDA 11.8) support, install from the PyTorch index instead:
+#   pip install torch==2.7.1 torchvision==0.22.1 \
+#       --index-url https://download.pytorch.org/whl/cu118
+#
+# scikit-learn, matplotlib, and scipy are used by training/evaluation
+# scripts in src/ but are NOT required to run the Streamlit app.
+# Install them separately if you intend to reproduce training:
+#   pip install scikit-learn==1.9.1 matplotlib==3.11.2 scipy==1.17.1

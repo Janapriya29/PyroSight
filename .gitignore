@@ -1,0 +1,90 @@
+# =============================================================================
+# PyroSight .gitignore
+# =============================================================================
+
+# --- Python ---
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# --- Data (large datasets — store externally or with DVC) ---
+data/raw/
+data/processed/
+data/external/
+data/IIITDMJ_Smoke/
+data/figlib_external/images/
+*.csv
+*.tsv
+*.h5
+*.hdf5
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.7z
+
+# --- Model files (large binaries — do not commit weights) ---
+models/*
+!models/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.bin
+*.onnx
+*.tflite
+
+# --- Results (generated outputs) ---
+results/*
+!results/.gitkeep
+
+# --- Experiment tracking ---
+mlruns/
+wandb/
+lightning_logs/
+runs/
+
+# --- Environment / secrets ---
+.env
+.env.*
+*.secret
+secrets.yaml
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Testing / coverage ---
+.coverage
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# --- Misc ---
+*.log
+*.tmp
+*.bak
